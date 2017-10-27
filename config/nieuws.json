@@ -1,0 +1,35 @@
+{
+    "nieuws":
+    [
+        {
+            "titel": "Een chip in ons hoofd in plaats van de smartphone, dat is over 10 jaar realiteit",
+            "id": 212,
+            "datum": "18/05/2017 • 22:45",
+            "categorieen": ["categorie 1","categorie 2"],
+            "samenvatting": "Jeroen Lemaire van digital product studio In The Pocket heeft de ontwikkelaarsconferentie Google I/O met veel belangstelling gevolgd.",
+            "body": "<p>Volgens computerspecialist Jeroen Lemaire wordt de verwevenheid tussen mens en computer steeds groter. Op de ontwikkelaarsconferentie Google I/O in Mountain View heeft Google een dertigtal nieuwe ontwikkelingen voorgesteld. 'Wat opvalt is dat de verwevenheid tussen mens en computer steeds groter wordt. De computer gaat denken als een mens en de programma's krijgen zelflerende software', aldus Lemaire in 'Van Gils & Gasten'.</p><p>De topman van Google, Sundar Pichai, heeft op de ontwikkelaarsconferentie Google I/O in Mountain View in de VS de nieuwste ontwikkelingen van de internetgigant voorgesteld. Google heeft de Google Assistant een grondige update gegeven en ontwikkelde ook Google Lens.</p>",
+            "afbeeldingl": "1047178140.jpg",
+            "afbeeldings": "1047178140-1.jpg"
+        },
+        {
+            "titel": "Tips & tricks: hoe worstel ik mijzelf door 'den blok'?",
+            "id": 210,
+            "datum": "19/05/2017 • 08:43",
+            "categorieen": ["categorie 3","categorie 5"],
+            "samenvatting": "De 'bloktijd' is opnieuw aangebroken, studenten buigen zich stilaan weer over hun cursussen en boeken. Hoe worstel je jezelf erdoor? Voor onze studerende medemens diepen we graag deze tips van de UGent nog eens op.",
+            "body": "<p>De 'bloktijd' is opnieuw aangebroken, studenten buigen zich stilaan weer over hun cursussen en boeken. Hoe worstel je jezelf erdoor? Voor onze studerende medemens diepen we graag deze tips van de UGent nog eens op.</p><p>De UGent verspreidde vorig jaar een brochure onder zijn studenten onder het motto 'efficiënter studeren', met concrete tips voor de verschillende fases van het studieproces: van de voorbereiding over de planning tot het studeren zelf.</p>",
+            "afbeeldingl": "4231643-1.jpg",
+            "afbeeldings": "4231643.jpg"
+        },
+        {
+            "titel": "Alles wat u over de verkiezingen in Iran moet weten in 4 vragen",
+            "id": 198,
+            "datum": "19/05/2017 • 06:06",
+            "categorieen": ["categorie 1","categorie 4"],
+            "samenvatting": "Twee serieuze kandidaten zijn nog in de running: de zittende Rouhani en de uiterst-conservatieve Raisi. Kiezen tussen de pest en de cholera? Buitenlandverslaggever Jens Franssen biedt antwoorden.",
+            "body": "<p>Twee serieuze kandidaten zijn nog in de running: de zittende Rouhani en de uiterst-conservatieve Raisi. Kiezen tussen de pest en de cholera? De jeugdwerkloosheid piekt. Zelfs opperleider Khamenei vond het welletjes toen tijdens de debatten het er hoger-lagergewijs aan toe ging over het aantal banen voor jongeren dat de kandidaten zouden creëren. 4 miljoen? Rouhani! 5 miljoen? Raisi! Wie biedt meer?</p><h2>Wie maakt kans?</h2><p>Favoriet om zichzelf op te volgen, is huidig president Hassan Rouhani. Hij wordt als gematigde hervormer beschouwd. In 2015 slaagde hij erin om de wurgende economische sancties tegen Iran op te heffen in ruil voor een akkoord met de internationale gemeenschap over Irans omstreden atoomprogramma. Zijn uitdager is Ebrahim Raisi. Dat is een religieuze jurist met jarenlange ervaring als rechter. Als jonge procureur heeft Raisi honderden jonge demonstranten veroordeeld tot lange, zware straffen. De polls geven Rouhani 30% tot 40%, tegenover 15% tot 25% voor Raisi.</p>",
+            "afbeeldingl": "4105804405-1.png",
+            "afbeeldings": "4105804405.png"
+        }
+    ]
+}

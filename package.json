@@ -1,0 +1,25 @@
+{
+  "name": "Digibytes",
+  "version": "1.0.0",
+  "description": "Mobile news site",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "web",
+    "nieuws",
+    "technology",
+    "node",
+    "express"
+  ],
+  "author": "Siu Soan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}
