@@ -12,6 +12,7 @@ body {
      font-family: 'Roboto', sans-serif;
      padding-left: 47px;
      padding-right: 47px;
+     overflow: scroll;
      /* Positionering van onze app tegenover ons scherm */
      /* >>> */
      position: absolute;
@@ -31,10 +32,16 @@ body {
      top: 0px;
 }
 
-.lijnRoute {
+.lijnRouteplanner {
      position: relative;
-     top: -84px;
+     top: -138px;
      left: 14px;
+}
+
+.pijlenRouteplanner {
+     position: relative;
+     top: -156px;
+     left: 245px;
 }
 /* <<< */
 
@@ -171,17 +178,35 @@ h3.knop2Wit {
      color: #828282;
      line-height: 39px;
      vertical-align: middle;
-}
-
-.input1:first-of-type {
      margin-bottom: 10px;
 }
+
+.input1:last-of-type {
+     margin-bottom: 0px;
+}
+
+
+.input2 {
+     position: relative;
+     width: 148px;
+     height: 39px;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: center;
+     color: #828282;
+     line-height: 39px;
+     margin-right: 8.99px;
+}
+
+.input2:last-of-type {
+     margin-right: 0px;
+}
+
 /* <<< */
 
 /* Nog een naam geven aub */
 /* >>> */
 .routeplanner {
-     height: 98px;
      margin-bottom: 10px;
 }
 /* <<< */
