@@ -1,21 +1,28 @@
+/* Positionering van onze app tegenover ons scherm */
+/* >>> */
 html {
      background: #333;
 }
+/* <<< */
 
 body {
-     width: 414px;
+     width: 320px;
      height: 736px;
      background: #FFD300;
      font-family: 'Roboto', sans-serif;
+     padding-left: 47px;
+     padding-right: 47px;
      /* Positionering van onze app tegenover ons scherm */
+     /* >>> */
      position: absolute;
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
+     /* <<< */
 }
 
-/* Achtergrond elementen */
-
+/* Elementen */
+/* >>> */
 .boog1 {
      position: absolute;
      width: 414px;
@@ -24,33 +31,61 @@ body {
      top: 0px;
 }
 
-/* Knoppen */
+.lijnRoute {
+     position: relative;
+     top: -84px;
+     left: 14px;
+}
+/* <<< */
 
-/* Grote knoppen */
-
-h3.knopLicht {
-     font-weight: bold;
-     font-size: 16px;
+/* Styling van tekst */
+/* >>> */
+h1 {
+     font-weight: 500;
+     line-height: normal;
+     font-size: 46px;
      text-align: center;
-     color: #828282;
-     line-height: 39px;
-     vertical-align: middle;
+     color: #F2F2F2;
+     margin-bottom: 10px;
 }
 
+h2 {
+     font-weight: 700;
+     line-height: normal;
+     font-size: 30px;
+     text-align: center;
+     color: #000000;
+     margin-bottom: 10px;
+}
+
+p {
+     font-weight: 300;
+     line-height: normal;
+     font-size: 14px;
+     text-align: left;
+     color: #000000;
+}
+/* <<< */
+
+/* Knoppen */
+/* >>> */
+     /* Grote knoppen */
+     /* >>> */
 .knop1-1 {
      position: relative;
      width: 320px;
      height: 39px;
      margin-left: auto;
      margin-right: auto;
+     margin-bottom: 10px;
      background: #F2F2F2;
 }
 
-h3.knopDonker {
-     font-weight: bold;
+h3.knop1Licht {
+     font-weight: 700;
      font-size: 16px;
      text-align: center;
-     color: #F2F2F2;
+     color: #828282;
      line-height: 39px;
      vertical-align: middle;
 }
@@ -61,14 +96,15 @@ h3.knopDonker {
      height: 39px;
      margin-left: auto;
      margin-right: auto;
+     margin-bottom: 10px;
      background: #828282;
 }
 
-h3.knopGeel {
-     font-weight: bold;
+h3.knop1Donker {
+     font-weight: 700;
      font-size: 16px;
      text-align: center;
-     color: #333333;
+     color: #F2F2F2;
      line-height: 39px;
      vertical-align: middle;
 }
@@ -79,11 +115,80 @@ h3.knopGeel {
      height: 39px;
      margin-left: auto;
      margin-right: auto;
+     margin-bottom: 10px;
      background: #FFD300;
 }
 
-/* Pagina's */
+h3.knop1Geel {
+     font-weight: 700;
+     font-size: 16px;
+     text-align: center;
+     color: #333333;
+     line-height: 39px;
+     vertical-align: middle;
+}
 
+.knop2-1 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10px;
+     background: rgba(0,0,0,0);
+}
+
+h3.knop2Zwart {
+     font-weight: 300;
+     font-size: 16px;
+     text-align: center;
+     color: #000000;
+     line-height: 39px;
+     vertical-align: middle;
+}
+
+h3.knop2Wit {
+     font-weight: 300;
+     font-size: 16px;
+     text-align: center;
+     color: #ffffff;
+     line-height: 39px;
+     vertical-align: middle;
+}
+     /* <<< */
+/* <<< */
+
+/* Input */
+/* >>> */
+.input1 {
+     position: relative;
+     width: 273px;
+     height: 39px;
+     padding-left: 43px;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: left;
+     color: #828282;
+     line-height: 39px;
+     vertical-align: middle;
+}
+
+.input1:first-of-type {
+     margin-bottom: 10px;
+}
+/* <<< */
+
+/* Nog een naam geven aub */
+/* >>> */
+.routeplanner {
+     height: 98px;
+     margin-bottom: 10px;
+}
+/* <<< */
+
+/* Pagina's */
+/* >>> */
 .welkomstscherm {
 
 }
+/* <<< */

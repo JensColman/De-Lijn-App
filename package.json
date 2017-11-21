@@ -1,7 +1,7 @@
 {
   "name": "Digibytes",
   "version": "1.0.0",
-  "description": "Mobile news site",
+  "description": "De Lijn",
   "main": "app.js",
   "directories": {
     "test": "test"
