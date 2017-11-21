@@ -16,7 +16,7 @@
     "node",
     "express"
   ],
-  "author": "Siu Soan",
+  "author": "Siu Soan, Jens Colman, Axana Vercamme en Loren Van Goubergen",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.6",

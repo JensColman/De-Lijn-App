@@ -1,35 +1,39 @@
+html {
+     background: #333;
+}
+
 body {
-  font-family: helvetica;
-  width: 90%;
-  margin: 25px auto;
-  line-height: 1.4em;
+     width: 414px;
+     height: 736px;
+     background: #FFD300;
+     
+     /* Positionering van onze app tegenover ons scherm */
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
 }
 
-section {
-  margin: 25px 0;
+/* Achtergrond elementen */
+
+.boog1 {
+     position: absolute;
+     width: 414px;
+     height: 736px;
+     left: 0px;
+     top: 0px;
+     background: linear-gradient(215.56deg, rgba(79, 79, 79, 0) -4.1%, #F2994A 103.53%);
+     background-blend-mode: overlay;
 }
 
-img {
-  max-width: 100%;
+/* Knoppen */
+
+.knop {
+
 }
 
-p {
-  margin: 10px 0;
-}
+/* Pagina's */
 
-h2 {
-  margin: 25px 0;
-}
+.welkomstscherm {
 
-h3 {
-  display: inline;
-}
-
-nav {
-  margin: 25px 0;
-}
-
-nav a {
-  display: inline-block;
-  margin-right: 5px;
 }
