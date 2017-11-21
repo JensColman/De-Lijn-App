@@ -6,7 +6,7 @@ body {
      width: 414px;
      height: 736px;
      background: #FFD300;
-     
+     font-family: 'Roboto', sans-serif;
      /* Positionering van onze app tegenover ons scherm */
      position: absolute;
      top: 50%;
@@ -22,14 +22,64 @@ body {
      height: 736px;
      left: 0px;
      top: 0px;
-     background: linear-gradient(215.56deg, rgba(79, 79, 79, 0) -4.1%, #F2994A 103.53%);
-     background-blend-mode: overlay;
 }
 
 /* Knoppen */
 
-.knop {
+/* Grote knoppen */
 
+h3.knopLicht {
+     font-weight: bold;
+     font-size: 16px;
+     text-align: center;
+     color: #828282;
+     line-height: 39px;
+     vertical-align: middle;
+}
+
+.knop1-1 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     margin-left: auto;
+     margin-right: auto;
+     background: #F2F2F2;
+}
+
+h3.knopDonker {
+     font-weight: bold;
+     font-size: 16px;
+     text-align: center;
+     color: #F2F2F2;
+     line-height: 39px;
+     vertical-align: middle;
+}
+
+.knop1-2 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     margin-left: auto;
+     margin-right: auto;
+     background: #828282;
+}
+
+h3.knopGeel {
+     font-weight: bold;
+     font-size: 16px;
+     text-align: center;
+     color: #333333;
+     line-height: 39px;
+     vertical-align: middle;
+}
+
+.knop1-3 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     margin-left: auto;
+     margin-right: auto;
+     background: #FFD300;
 }
 
 /* Pagina's */
