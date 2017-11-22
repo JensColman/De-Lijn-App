@@ -23,10 +23,11 @@ body {
 }
 
 /*navigatie*/
+/* >>> */
 nav{
   background-color: darkgrey;
   height: 80px;
-  
+
 }
 
 nav ul{
@@ -51,6 +52,7 @@ nav a{
   font-family: 'Cormorant Garamond', serif;
   padding: 4px;
 }
+/* <<< */
 
 /* Elementen */
 /* >>> */
@@ -72,6 +74,10 @@ nav a{
      position: relative;
      top: -156px;
      left: 245px;
+}
+
+.achtergrondAfbeelding {
+     background-image: url("public/img/achtergrondAfbeelding.jpeg");
 }
 /* <<< */
 
