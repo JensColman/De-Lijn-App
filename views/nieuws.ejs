@@ -1,0 +1,26 @@
+<% include header %>
+
+
+<h1><a href="/">Nieuws demo homepage</a></h1>
+<section>
+
+    <h2>
+      <%- item.titel %>
+    </h2>
+    <img src="/img/<%- item.afbeeldingl %>" alt="<%- item.titel %>">
+
+    <p><%- item.datum %></p>
+
+    <p>
+      <%- item.body %>
+    </p>
+
+    <p>Gepost in categorieën:
+
+      <% for (var i = 0; i < item.categorieen.length; i++) { %>
+        <a href="/categorieen/<%- i %>"><%- item.categorieen[i] %></a><% if (i+1< item.categorieen.length){ %>, <% } %>
+      <% } %>
+    </p>
+</section>
+
+<% include footer %>
