@@ -22,6 +22,35 @@ body {
      /* <<< */
 }
 
+/*navigatie*/
+nav{
+  background-color: rgb(230,0,0);
+  height: 80px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li{
+  list-style-type: none;
+  padding-top: 28px;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: capitalize;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 4px;
+}
+
 /* Elementen */
 /* >>> */
 .boog1 {
