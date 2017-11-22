@@ -24,8 +24,9 @@ body {
 
 /*navigatie*/
 nav{
-  background-color: rgb(230,0,0);
+  background-color: darkgrey;
   height: 80px;
+  
 }
 
 nav ul{
