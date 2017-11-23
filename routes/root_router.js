@@ -8,4 +8,13 @@ root.get('/', function(req, res) {
   });
 });
 
+
+// Route naar voorbeeld
+
+root.get('/voorbeeld', function(req, res) {
+  res.render("voorbeeld", {
+       
+  });
+});
+
 module.exports = root;
