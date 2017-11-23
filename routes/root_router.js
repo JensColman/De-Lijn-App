@@ -10,10 +10,23 @@ root.get('/', function(req, res) {
 
 
 // Route naar voorbeeld
-
 root.get('/voorbeeld', function(req, res) {
   res.render("voorbeeld", {
-       
+
+  });
+});
+
+// Route naar aanmelden
+root.get('/aanmelden', function(req, res) {
+  res.render("aanmelden", {
+
+  });
+});
+
+// Route naar registreren
+root.get('/registreren', function(req, res) {
+  res.render("registreren", {
+
   });
 });
 
