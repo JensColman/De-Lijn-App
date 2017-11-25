@@ -1,5 +1,15 @@
 <% include header %>
 
-<% include navigatie %>
-
-<h1>routeplanner</h1>
+<div class="routeplanner">
+  <h2>Waar wil je naartoe?</h2>
+  <form action="">
+      <input type="text" name="vertrek" placeholder="Van">
+      <input type="text" name="aankomst" placeholder="Naar">
+      <select name="vertrek-aankomst">
+            <option value="aankomst">Aankomst</option>
+            <option value="vertrek">Vertrek</option>
+      </select>
+      <input type="time" name="tijd" value="13:00">
+      <input type="submit" value="Plan route">
+  </form>
+</div>
