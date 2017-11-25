@@ -6,13 +6,10 @@ html {
 /* <<< */
 
 body {
-     width: 320px;
+     width: 417px;
      height: 736px;
      background: #FFD300;
      font-family: 'Roboto', sans-serif;
-     padding-left: 47px;
-     padding-right: 47px;
-     overflow: scroll;
      /* Positionering van onze app tegenover ons scherm */
      /* >>> */
      position: absolute;
@@ -21,6 +18,49 @@ body {
      transform: translate(-50%, -50%);
      /* <<< */
 }
+
+.marge {
+     width: 320px;
+     padding-left: 47px;
+     padding-right: 47px;
+}
+
+/*navigatie*/
+/* >>> */
+nav{
+  background-color: darkgrey;
+  height: 50px;
+  width: 100%;
+  border-bottom: 5px solid lightgrey;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li{
+  list-style-type: none;
+  padding-top: 18.5px;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1em;
+  font-weight: 900;
+  padding: 4px;
+}
+
+nav a:hover{
+  border-bottom: 5px solid deepskyblue;
+  padding-bottom: 15px;
+}
+
+/* <<< */
 
 /* Elementen */
 /* >>> */
@@ -42,6 +82,21 @@ body {
      position: relative;
      top: -156px;
      left: 245px;
+}
+
+.achtergrondAfbeelding {
+     background-image: url("/img/achtergrondAfbeelding.jpeg");
+     background-position: -200px 0px;
+     background-size: cover;
+     width: 100%;
+     height: 100%;
+     filter: blur(7px);
+     padding: 10px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     clip: rect(0px, 412px, 731px, 0px);
+     /* Fuck deze shit, doe het met photoshop! */
 }
 /* <<< */
 
