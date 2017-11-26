@@ -70,4 +70,11 @@ root.get('/suggesties', function(req, res) {
   });
 });
 
+// Route naar voorbeeld
+root.get('/voorbeeld', function(req, res) {
+  res.render("voorbeeld", {
+       page_name: "voorbeeld"
+  });
+});
+
 module.exports = root;
