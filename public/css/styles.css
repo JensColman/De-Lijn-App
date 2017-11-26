@@ -27,24 +27,24 @@ body {
 
 /*navigatie*/
 /* >>> */
-nav{
+nav {
   background-color: darkgrey;
   height: 50px;
   width: 100%;
   border-bottom: 5px solid lightgrey;
 }
 
-nav ul{
+nav ul {
   display: flex;
   justify-content: space-around;
 }
 
-nav li{
+nav li {
   list-style-type: none;
   padding-top: 18.5px;
 }
 
-nav a{
+nav a {
   text-decoration: none;
   text-align: center;
   color: white;
@@ -55,7 +55,7 @@ nav a{
   padding: 4px;
 }
 
-nav a:hover{
+.current {
   border-bottom: 5px solid deepskyblue;
   padding-bottom: 15px;
 }
