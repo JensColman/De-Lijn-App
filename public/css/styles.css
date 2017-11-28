@@ -278,6 +278,24 @@ h3.knop2Wit {
      margin-right: 0px;
 }
 
+.input3 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     border: none;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: center;
+     color: #828282;
+     line-height: 39px;
+     vertical-align: middle;
+     margin-bottom: 0px;
+}
+
+.input3:last-of-type {
+     margin-bottom: 0px;
+}
+
 /* <<< */
 
 /* Nog een naam geven aub */
@@ -309,6 +327,31 @@ h3.knop2Wit {
 .knopWitwelkomstscherm {
      position: absolute;
      top: 600px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* Aanmeldscherm */
+     /* >>> */
+.aanmeldingsTitel {
+     position: absolute;
+     top: 150px;
+     left: 50%;
+     transform: translate(-50%);
+}
+
+.aanmeldingsForm {
+     position: absolute;
+     top: 450px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* Registreren */
+     /* >>> */
+.registrerenForm {
+     position: absolute;
+     top: 350px;
      left: 50%;
      transform: translate(-50%);
 }
