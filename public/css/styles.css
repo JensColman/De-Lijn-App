@@ -101,6 +101,12 @@ a {
      position: absolute;
 }
 
+.terugPijl {
+     position: absolute;
+     top: 35px;
+     left: 47px;
+}
+
 /*.achtergrondAfbeelding {
      height: inherit;
      filter: blur(7px);
