@@ -357,7 +357,16 @@ h3.knop2Wit {
      /* >>> */
 .registrerenForm {
      position: absolute;
-     top: 350px;
+     top: 352px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* RegiGelukt */
+     /* >>> */
+.regiGeluktForm {
+     position: absolute;
+     top: 548px;
      left: 50%;
      transform: translate(-50%);
 }
