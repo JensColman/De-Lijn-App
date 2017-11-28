@@ -77,4 +77,11 @@ root.get('/voorbeeld', function(req, res) {
   });
 });
 
+// Route naar test1
+root.get('/test1', function(req, res) {
+  res.render("test1", {
+       page_name: "test1"
+  });
+});
+
 module.exports = root;
