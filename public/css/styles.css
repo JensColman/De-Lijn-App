@@ -29,14 +29,6 @@ body {
 
 /*navigatie*/
 /* >>> */
-<<<<<<< HEAD
-nav {
-  background-color: darkgrey;
-  height: 50px;
-  width: 100%;
-  border-bottom: 5px solid lightgrey;
-}
-
 .icon_home, .icon_storingen, .icon_favorieten, .icon_instellingen {
   display: block;
   width: 50px;
@@ -75,7 +67,6 @@ nav ul {
 
 nav li {
   list-style-type: none;
-  padding-top: 18.5px;
 }
 
 nav a {
@@ -86,12 +77,6 @@ nav a {
   letter-spacing: 0.5px;
   font-size: 1em;
   font-weight: 900;
-  padding: 4px;
-}
-
-.current {
-  border-bottom: 5px solid deepskyblue;
-  padding-bottom: 15px;
 }
 
 .current {
@@ -241,12 +226,11 @@ h3.knop1Donker {
 .knop1-3 {
      position: relative;
      width: 320px;
-     height: 49px;
+     height: 39px;
      margin-left: auto;
      margin-right: auto;
      margin-bottom: 10px;
      background: #FFD300;
-     border-radius: 5px;
 }
 
 h3.knop1Geel {
@@ -254,7 +238,7 @@ h3.knop1Geel {
      font-size: 16px;
      text-align: center;
      color: #333333;
-     line-height: 49px;
+     line-height: 39px;
      vertical-align: middle;
 }
 
@@ -266,7 +250,6 @@ h3.knop1Geel {
      margin-right: auto;
      margin-bottom: 10px;
      background: rgba(0,0,0,0);
-     margin-top: 10px;
 }
 
 h3.knop2Zwart {
@@ -414,18 +397,7 @@ h3.knop2Wit {
      left: 50%;
      transform: translate(-50%);
 }
-
      /* <<< */
-     /* RegiGelukt */
-     /* >>> */
-.regiGeluktForm {
-     position: absolute;
-     top: 548px;
-     left: 50%;
-     transform: translate(-50%);
-}
-     /* <<< */
-
      /* test API */
      /* >>> */
 .testForm {
