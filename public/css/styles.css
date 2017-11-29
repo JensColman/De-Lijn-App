@@ -29,11 +29,35 @@ body {
 
 /*navigatie*/
 /* >>> */
+.icon_home, .icon_storingen, .icon_favorieten, .icon_instellingen {
+  display: block;
+  width: 50px;
+  height: 67px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon_home {
+  background-image: url('../img/home.png');
+}
+
+.icon_storingen {
+  background-image: url('../img/storingen.png');
+}
+
+.icon_favorieten {
+  background-image: url('../img/favorieten.png');
+}
+
+.icon_instellingen {
+  background-image: url('../img/instellingen.png');
+}
+
 nav {
-  background-color: darkgrey;
-  height: 50px;
+  background-color: #828282;
   width: 100%;
   border-bottom: 5px solid lightgrey;
+  height: 67px;
 }
 
 nav ul {
@@ -43,7 +67,6 @@ nav ul {
 
 nav li {
   list-style-type: none;
-  padding-top: 18.5px;
 }
 
 nav a {
@@ -54,12 +77,10 @@ nav a {
   letter-spacing: 0.5px;
   font-size: 1em;
   font-weight: 900;
-  padding: 4px;
 }
 
 .current {
-  border-bottom: 5px solid deepskyblue;
-  padding-bottom: 15px;
+  border-bottom: 5px solid #56CCF2;
 }
 
 a {
@@ -168,25 +189,29 @@ p {
      margin-right: auto;
      margin-bottom: 10px;
      background: #F2F2F2;
+     border-radius: 5px;
 }
 
 h3.knop1Licht {
-     font-weight: 700;
-     font-size: 16px;
-     text-align: center;
+     font-weight: 300;
+     font-size: 12px;
+     text-align: left;
+     padding-left: 10px;
      color: #828282;
      line-height: 39px;
-     vertical-align: middle;
+     /*vertical-align: middle; --> doet niks*/
 }
 
 .knop1-2 {
      position: relative;
      width: 320px;
-     height: 39px;
+     height: 49px;
      margin-left: auto;
      margin-right: auto;
      margin-bottom: 10px;
-     background: #828282;
+     background: #2D9CDB;
+     border-radius: 5px;
+     margin-top: 39px;
 }
 
 h3.knop1Donker {
@@ -194,7 +219,7 @@ h3.knop1Donker {
      font-size: 16px;
      text-align: center;
      color: #F2F2F2;
-     line-height: 39px;
+     line-height: 49px;
      vertical-align: middle;
 }
 
@@ -231,9 +256,10 @@ h3.knop2Zwart {
      font-weight: 300;
      font-size: 16px;
      text-align: center;
-     color: #000000;
+     color: #828282;
      line-height: 39px;
      vertical-align: middle;
+     text-decoration: underline;
 }
 
 h3.knop2Wit {
@@ -243,6 +269,7 @@ h3.knop2Wit {
      color: #ffffff;
      line-height: 39px;
      vertical-align: middle;
+     text-decoration: underline;
 }
      /* <<< */
 /* <<< */
