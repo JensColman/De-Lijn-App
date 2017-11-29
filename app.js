@@ -15,13 +15,13 @@ app.use(express.static('public'));
 app.use(require("./routes/root_router"));
 
 
-/*request('https://www.delijn.be/rise-api-core/haltes/vertrekken/{halte_id}/{num_results}', function (error, response, body) {
-     //console.log('Status:', response.statusCode);
-     //console.log('Headers:', JSON.stringify(response.headers));
-     //console.log('Response:', body);
-});*/
+request('https://www.delijn.be/rise-api-core/reisadvies/routes/{startPoint}/{endPoint}/{startX}/{startY}/{endX}/{endY}/{date}/{time}/{arrivalDeparture}/{byBus}/{byTram}/{byMetro}/{byTrain}/{byBelbus}/{language}', function (error, response, body) {
+  console.log('Status:', response.statusCode);
+  console.log('Headers:', JSON.stringify(response.headers));
+  console.log('Response:', body);
+});
 
-app.post('/test2', function(req, res) {
+/*app.post('/test2', function(req, res) {
     // console.log(req.body.stad);
     var s_d = ' ';
     request('https://www.delijn.be/rise-api-core/locations/verkooppunten/' + req.body.stad, function (error, response, body) {
@@ -52,7 +52,7 @@ app.post('/test2', function(req, res) {
         resultaat: `${s_d}`,
       });
     });
-});
+});*/
 
 
 app.listen(app.get('port'), function() {
