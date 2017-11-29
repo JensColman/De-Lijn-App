@@ -226,11 +226,12 @@ h3.knop1Donker {
 .knop1-3 {
      position: relative;
      width: 320px;
-     height: 39px;
+     height: 49px;
      margin-left: auto;
      margin-right: auto;
      margin-bottom: 10px;
      background: #FFD300;
+     border-radius: 5px;
 }
 
 h3.knop1Geel {
@@ -238,7 +239,7 @@ h3.knop1Geel {
      font-size: 16px;
      text-align: center;
      color: #333333;
-     line-height: 39px;
+     line-height: 49px;
      vertical-align: middle;
 }
 
@@ -250,6 +251,7 @@ h3.knop1Geel {
      margin-right: auto;
      margin-bottom: 10px;
      background: rgba(0,0,0,0);
+     margin-top: 10px;
 }
 
 h3.knop2Zwart {
