@@ -22,7 +22,7 @@ app.use(require("./routes/root_router"));
      //console.log('Response:', body);
 });*/
 
-app.post('/result', function(req, res) {
+/*app.post('/result', function(req, res) {
     // console.log(req.body.stad);
     var s_d = ' ';
     request('https://www.delijn.be/rise-api-core/locations/verkooppunten/' + req.body.stad, function (error, response, body) {
@@ -53,7 +53,7 @@ app.post('/result', function(req, res) {
         resultaat: `${s_d}`,
       });
     });
-});
+});*/
 
 
 app.listen(app.get('port'), function() {
