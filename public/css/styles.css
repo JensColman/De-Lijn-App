@@ -1,3 +1,5 @@
+/* Grid van het document is 38x40px voor het grote vierkantje en 10px voor de marge */
+
 /* Positionering van onze app tegenover ons scherm */
 /* >>> */
 html {
@@ -60,6 +62,11 @@ nav a {
   padding-bottom: 15px;
 }
 
+a {
+     text-decoration: none;
+     color: inherit;
+}
+
 /* <<< */
 
 /* Elementen */
@@ -85,19 +92,34 @@ nav a {
 }
 
 .achtergrondAfbeelding {
-     background-image: url("/img/achtergrondAfbeelding.jpeg");
-     background-position: -200px 0px;
+     background-image: url("/img/achtergrondAfbeelding2.jpg");
      background-size: cover;
-     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
      height: 100%;
-     filter: blur(7px);
-     padding: 10px;
+     width: 100%;
      position: absolute;
-     top: 0;
-     left: 0;
-     clip: rect(0px, 412px, 731px, 0px);
-     /* Fuck deze shit, doe het met photoshop! */
 }
+
+.terugPijl {
+     position: absolute;
+     top: 35px;
+     left: 47px;
+}
+
+/*.achtergrondAfbeelding {
+     height: inherit;
+     filter: blur(7px);
+     transform: scale(1.1);
+     position: relative;
+     right: 200px;
+}
+
+.clippingAchtergrond {
+     width: auto;
+     height: 100%;
+     overflow: hidden;
+}*/
 /* <<< */
 
 /* Styling van tekst */
@@ -118,6 +140,11 @@ h2 {
      text-align: center;
      color: #000000;
      margin-bottom: 10px;
+     width: 320px;
+}
+
+h2.white {
+     color: #F2F2F2;
 }
 
 p {
@@ -257,6 +284,24 @@ h3.knop2Wit {
      margin-right: 0px;
 }
 
+.input3 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     border: none;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: center;
+     color: #828282;
+     line-height: 39px;
+     vertical-align: middle;
+     margin-bottom: 0px;
+}
+
+.input3:last-of-type {
+     margin-bottom: 0px;
+}
+
 /* <<< */
 
 /* Nog een naam geven aub */
@@ -268,7 +313,71 @@ h3.knop2Wit {
 
 /* Pagina's */
 /* >>> */
-.welkomstscherm {
-
+     /* welkomstscherm */
+     /* >>> */
+.h2welkomstscherm {
+     position: absolute;
+     top: 200px;
+     font-weight: 400;
+     left: 50%;
+     transform: translate(-50%);
 }
+
+.knopGeelwelkomstscherm {
+     position: absolute;
+     top: 550px;
+     left: 50%;
+     transform: translate(-50%);
+}
+
+.knopWitwelkomstscherm {
+     position: absolute;
+     top: 600px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* Aanmeldscherm */
+     /* >>> */
+.aanmeldingsTitel {
+     position: absolute;
+     top: 150px;
+     left: 50%;
+     transform: translate(-50%);
+}
+
+.aanmeldingsForm {
+     position: absolute;
+     top: 450px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* Registreren */
+     /* >>> */
+.registrerenForm {
+     position: absolute;
+     top: 352px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* RegiGelukt */
+     /* >>> */
+.regiGeluktForm {
+     position: absolute;
+     top: 548px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* test API */
+     /* >>> */
+.testForm {
+     position: absolute;
+     top: 150px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
 /* <<< */

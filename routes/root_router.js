@@ -70,4 +70,18 @@ root.get('/suggesties', function(req, res) {
   });
 });
 
+// Route naar voorbeeld
+root.get('/voorbeeld', function(req, res) {
+  res.render("voorbeeld", {
+       page_name: "voorbeeld"
+  });
+});
+
+// Route naar test1
+root.get('/test1', function(req, res) {
+  res.render("test1", {
+       page_name: "test1"
+  });
+});
+
 module.exports = root;
