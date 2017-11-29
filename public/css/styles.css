@@ -37,7 +37,6 @@ nav {
   border-bottom: 5px solid lightgrey;
 }
 
-=======
 .icon_home, .icon_storingen, .icon_favorieten, .icon_instellingen {
   display: block;
   width: 50px;
@@ -69,7 +68,6 @@ nav {
   height: 67px;
 }
 
->>>>>>> css
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -77,10 +75,7 @@ nav ul {
 
 nav li {
   list-style-type: none;
-<<<<<<< HEAD
   padding-top: 18.5px;
-=======
->>>>>>> css
 }
 
 nav a {
@@ -91,19 +86,16 @@ nav a {
   letter-spacing: 0.5px;
   font-size: 1em;
   font-weight: 900;
-<<<<<<< HEAD
   padding: 4px;
 }
 
 .current {
   border-bottom: 5px solid deepskyblue;
   padding-bottom: 15px;
-=======
 }
 
 .current {
   border-bottom: 5px solid #56CCF2;
->>>>>>> css
 }
 
 a {
@@ -412,7 +404,6 @@ h3.knop2Wit {
      top: 352px;
      left: 50%;
      transform: translate(-50%);
-<<<<<<< HEAD
 }
      /* <<< */
      /* RegiGelukt */
@@ -423,9 +414,7 @@ h3.knop2Wit {
      left: 50%;
      transform: translate(-50%);
 }
-     /* <<< */
-=======
-}
+
      /* <<< */
      /* RegiGelukt */
      /* >>> */
@@ -436,7 +425,7 @@ h3.knop2Wit {
      transform: translate(-50%);
 }
      /* <<< */
->>>>>>> css
+
      /* test API */
      /* >>> */
 .testForm {
