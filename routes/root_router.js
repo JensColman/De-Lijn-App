@@ -84,4 +84,11 @@ root.get('/test1', function(req, res) {
   });
 });
 
+// Route naar test2
+root.get('/test2', function(req, res) {
+  res.render("test2", {
+       page_name: "test2"
+  });
+});
+
 module.exports = root;
