@@ -1,33 +1,4 @@
 <% include header %>
-<!--
-<div class="testForm">
-     <input class="input1" type="text" name="startPoint" value="">
-     <input class="input1" type="text" name="endPoint" value="">
-     <a target="_blank" href="https://www.delijn.be/rise-api-core/reisadvies/routes/" onclick="location.href=this.href+startPoint+'/'+endPoint+'/';return false;">Test</a>
-
-     <script language="javascript" type="text/javascript">
-          var startPoint = document.getElementsByName('startPoint')[0].value;
-          var endPoint = document.getElementsByName('startPoint')[0].value;
-     </script>
-
-
-
-</div>
--->
-
-<!--<h6>zoek verkooppunten in uw gemeente van De Lijn</h6>
-
-<form method="post" action="/result">
-  <input type="text" name="stad" value="">
-
-  <input type="submit" value="toon resultaten">
-</form>
-
-<% resultaat %>
-
-<% include footer %>-->
-
-
 <h1>Vul lijnnummer in</h1>
 
 <form method="post" action="/result">
@@ -41,3 +12,6 @@ var omleidingen = <%- omleidingen %>;
 
 console.log(omleidingen);
 </script>
+
+
+<%- omleidingen %>
