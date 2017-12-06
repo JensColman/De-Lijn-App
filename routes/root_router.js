@@ -91,4 +91,11 @@ root.get('/test2', function(req, res) {
   });
 });
 
+// Route naar result
+root.get('/result', function(req, res) {
+  res.render("result", {
+       page_name: "result"
+  });
+});
+
 module.exports = root;
