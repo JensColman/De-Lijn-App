@@ -106,7 +106,7 @@ app.post('/result', function(req, res) {
 
                } // for
 
-          } //if-else
+          } //if-else 
 
 
           res.render('result', {
