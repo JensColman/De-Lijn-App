@@ -15,45 +15,6 @@ app.use(express.static('public'));
 app.use(require("./routes/root_router"));
 
 
-/*request('https://www.delijn.be/rise-api-core/reisadvies/routes/{startPoint}/{endPoint}/{startX}/{startY}/{endX}/{endY}/{date}/{time}/{arrivalDeparture}/{byBus}/{byTram}/{byMetro}/{byTrain}/{byBelbus}/{language}', function (error, response, body) {
-  console.log('Status:', response.statusCode);
-  console.log('Headers:', JSON.stringify(response.headers));
-  console.log('Response:', body);
-});*/
-
-/*app.post('/test2', function(req, res) {
-    //console.log(req.body.gemeente);
-    var bodyElement = '';
-    request('https://www.delijn.be/rise-api-core/locations/verkooppunten/' + req.body.gemeente, function (error, response, body) {
-      var d = JSON.parse(body);
-      console.log(d);
-
-      if (d === null) {
-        bodyElement += `
-        <p> Er zijn geen verkooppunten gevonden in de gemeente ${req.body.gemeente}</p>
-        `;
-      }
-      else {
-
-        bodyElement += `goril
-          <p> verkooppunten in de gemeente ${req.body.gemeente}</p>
-        `;
-        for (var i = 0; i < d.length; i++) {
-          var a = d[i];
-          bodyElement += `
-            <p> ${a.gemeente} </p>
-            <p> ${a.naam} verkoopt tickets </p>
-            <p> Richting: ${a.adresString} </p>
-            <hr>
-          `;
-        }
-      }
-      res.render('test2', {
-        resultaat: `${bodyElement}`,
-      });
-    });
-});*/
-
 app.post('/result', function(req, res) {
      var s_d = ' ';
      request('https://www.delijn.be/rise-api-search/search/quicksearch/' + req.body.lijnnummer, function (error, response, body) {
@@ -106,7 +67,7 @@ app.post('/result', function(req, res) {
 
                } // for
 
-          } //if-else 
+          } //if-else
 
 
           res.render('result', {
@@ -116,6 +77,48 @@ app.post('/result', function(req, res) {
           });
      });
 });
+
+
+/*request('https://www.delijn.be/rise-api-core/reisadvies/routes/{startPoint}/{endPoint}/{startX}/{startY}/{endX}/{endY}/{date}/{time}/{arrivalDeparture}/{byBus}/{byTram}/{byMetro}/{byTrain}/{byBelbus}/{language}', function (error, response, body) {
+  console.log('Status:', response.statusCode);
+  console.log('Headers:', JSON.stringify(response.headers));
+  console.log('Response:', body);
+});*/
+
+/*app.post('/test2', function(req, res) {
+    //console.log(req.body.gemeente);
+    var bodyElement = '';
+    request('https://www.delijn.be/rise-api-core/locations/verkooppunten/' + req.body.gemeente, function (error, response, body) {
+      var d = JSON.parse(body);
+      console.log(d);
+
+      if (d === null) {
+        bodyElement += `
+        <p> Er zijn geen verkooppunten gevonden in de gemeente ${req.body.gemeente}</p>
+        `;
+      }
+      else {
+
+        bodyElement += `goril
+          <p> verkooppunten in de gemeente ${req.body.gemeente}</p>
+        `;
+        for (var i = 0; i < d.length; i++) {
+          var a = d[i];
+          bodyElement += `
+            <p> ${a.gemeente} </p>
+            <p> ${a.naam} verkoopt tickets </p>
+            <p> Richting: ${a.adresString} </p>
+            <hr>
+          `;
+        }
+      }
+      res.render('test2', {
+        resultaat: `${bodyElement}`,
+      });
+    });
+});*/
+
+
 
 
 app.listen(app.get('port'), function() {
