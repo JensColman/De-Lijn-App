@@ -15,7 +15,7 @@
 </div>
 -->
 
-<h6>zoek verkooppunten in uw gemeente van De Lijn</h6>
+<!--<h6>zoek verkooppunten in uw gemeente van De Lijn</h6>
 
 <form method="post" action="/result">
   <input type="text" name="stad" value="">
@@ -25,4 +25,19 @@
 
 <% resultaat %>
 
-<% include footer %>
+<% include footer %>-->
+
+
+<h1>Vul lijnnummer in</h1>
+
+<form method="post" action="/result">
+  <input type="text" name="lijnnummer" value="">
+
+  <input type="submit" value="toon resultaten">
+</form>
+
+<script>
+var omleidingen = <%- omleidingen %>;
+
+console.log(omleidingen);
+</script>
