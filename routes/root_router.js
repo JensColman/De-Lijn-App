@@ -77,10 +77,25 @@ root.get('/voorbeeld', function(req, res) {
   });
 });
 
+
+// Route naar result
+root.get('/result', function(req, res) {
+  res.render("result", {
+       page_name: "result"
+  });
+});
+
 // Route naar test1
 root.get('/test1', function(req, res) {
   res.render("test1", {
        page_name: "test1"
+  });
+});
+
+// Route naar test2
+root.get('/test2', function(req, res) {
+  res.render("test2", {
+       page_name: "test2"
   });
 });
 
