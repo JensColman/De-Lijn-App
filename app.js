@@ -19,10 +19,10 @@ app.post('/result', function(req, res) {
      var s_d = ' ';
      request('https://www.delijn.be/rise-api-search/search/quicksearch/' + req.body.lijnnummer, function (error, response, body) {
           var d = JSON.parse(body);
-          console.log(d);
+          //console.log(d);
 
 
-          if(d.lijnen.length === 0) {
+          /*if(d.lijnen.length === 0) {
                s_d += 'Er zijn geen lijnen gevonden';
           } else {
 
@@ -60,7 +60,68 @@ app.post('/result', function(req, res) {
                          //console.log('Response:', body);
 
                          console.log(omleidingen);
+                         // hier kan je dan je user interface opzetten*/
+
+                         /*var opmaak = '';
+                         var styling = '';
+                         styling += '<h3>qsdqs</h3>';*/
+
+
+                         //s_d += '<p> Er zijn geen verkooppunten gevonden in de gemeente ${lijn.omschrijving}</p>';
+                    //}); // request
+
+               //} // for
+
+          //} //if-else
+
+
+          if(d.lijnen.length === 0) {
+               s_d += 'Er zijn geen lijnen gevonden';
+          } else {
+
+               for(var i=0; i < d.lijnen.length; i++) {
+                    lijn = d.lijnen[i];
+                    //console.log(lijn); // debug
+
+                    // Datum verkrijgen
+                    var dagVanVandaag = new Date();
+                    var dd = dagVanVandaag.getDate();
+                    var mm = dagVanVandaag.getMonth() + 1; //Januari is 0!
+                    var yyyy = dagVanVandaag.getFullYear();
+
+                    if (dd < 10) {
+                         dd = '0' + dd;
+                    }
+
+                    if (mm < 10) {
+                         mm = '0' + mm;
+                    }
+
+                    dagVanVandaag = dd + '-' + mm + '-' + yyyy;
+                    // Einde datum verkrijgen
+                    //Tijdelijke overschrijving datum
+                    dagVanVandaag = "29-11-2017";
+                    // Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
+
+
+                    request('https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl', function (error, response, body) {
+                         var omleidingen = JSON.parse(body);
+
+                         //console.log('Status:', response.statusCode);
+                         //console.log('Headers:', JSON.stringify(response.headers));
+                         //console.log('Response:', body);
+
+                         //console.log(omleidingen);
                          // hier kan je dan je user interface opzetten
+
+                         //console.log(d);
+                         //console.log(omleidingen.omleidingList);
+                         if (omleidingen.omleidingList.length === 0) {
+                              //s_d += "niets gevonden";
+                              console.log("geen omleidingen gevonden");
+                         } else {
+                              console.log(omleidingen.omleidingList[0].omleiding);
+                         }
 
                          /*var opmaak = '';
                          var styling = '';
