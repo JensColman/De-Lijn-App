@@ -52,19 +52,14 @@ app.post('/result', function(req, res) {
                     // Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 
 
-                    if (lijn.omleidingen === true) {
-                         console.log("er zijn omleidingen");
-                    }
-
-
                     request('https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl', function (error, response, body) {
                          var omleidingen = JSON.parse(body);
-                         
-                         console.log('Status:', response.statusCode);
-                         console.log('Headers:', JSON.stringify(response.headers));
-                         console.log('Response:', body);
 
-                         //console.log(omleidingen);
+                         //console.log('Status:', response.statusCode);
+                         //console.log('Headers:', JSON.stringify(response.headers));
+                         //console.log('Response:', body);
+
+                         console.log(omleidingen);
                          // hier kan je dan je user interface opzetten
 
                          /*var opmaak = '';
