@@ -29,7 +29,7 @@ app.post('/result', function(req, res) {
                for(var i=0; i < d.lijnen.length; i++) {
                     lijn = d.lijnen[i]; // Eerste lijn nemen die gevonden is. In theorie kan je beter misschien over de lijnen loopen en de gebruiker de keuze geven tussen alle gevonden lijnen.
 
-                    console.log(lijn); // debug
+                    //console.log(lijn); // debug
 
                     // Datum verkrijgen
                     var dagVanVandaag = new Date();
@@ -52,9 +52,19 @@ app.post('/result', function(req, res) {
                     // Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 
 
+                    if (lijn.omleidingen === true) {
+                         console.log("er zijn omleidingen");
+                    }
+
+
                     request('https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl', function (error, response, body) {
                          var omleidingen = JSON.parse(body);
-                         console.log(omleidingen);
+                         
+                         console.log('Status:', response.statusCode);
+                         console.log('Headers:', JSON.stringify(response.headers));
+                         console.log('Response:', body);
+
+                         //console.log(omleidingen);
                          // hier kan je dan je user interface opzetten
 
                          /*var opmaak = '';
