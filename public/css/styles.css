@@ -98,6 +98,7 @@ a {
      height: 736px;
      left: 0px;
      top: 0px;
+     z-index: 1;
 }
 
 .lijnRouteplanner {
@@ -417,4 +418,112 @@ h3.knop2Wit {
      transform: translate(-50%);
 }
      /* <<< */
-/* <<< */
+     /* instellingen.ejs */
+     /* <<< */
+.achtergrond_instellingen {
+  background-color: #828282;
+  width: 417px;
+  height: 736px;
+  background-image: url(../img/achtergrond_instellingen.svg);
+  background-repeat: no-repeat;
+}
+
+.profile {
+  display: block;
+  padding-top: 50px;
+}
+
+#profielbox {
+  width: 94px;
+  height: 94px;
+  background-image: url(../img/profielfoto.png);
+  margin: 0 auto 20px;
+}
+
+.username {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  width: auto;
+  position: relative;
+}
+
+.kleine_link {
+  font-size: 14px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  text-decoration: underline;
+  color: #FFFFFF;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+.oplijsting_instellingen {
+  width: 288px;
+  margin: 0px auto;
+}
+
+.oplijsting_instellingen li {
+  margin-bottom: 30px;
+}
+
+.link_instellingen {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 30px;
+  color: #FFFFFF;
+  text-align: left;
+  width: auto;
+  display: inline;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.tickets {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/tickets.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
+
+.account {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/account.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
+
+.instellingen {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/tandwiel.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
+
+.over {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/over.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
