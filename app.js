@@ -49,21 +49,40 @@ app.post('/result', function(req, res) {
                     // Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 
 
+                    // var geenOmleidingen = false;
+
                     request('https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl', function (error, response, body) {
                          var omleidingen = JSON.parse(body);
 
+                         // Hier loopt het fout, deze if functie werkt niet
                          if (omleidingen.omleidingList.length === 0) {
                               console.log("geen omleidingen gevonden");
                               htmlInput += 'Er zijn geen omleidingen gevonden';
-
+                              htmlInput += `<br />`;
+                              //geenOmleidingen = false;
 
                          } else {
                               console.log(omleidingen.omleidingList[0].omleiding);
                               htmlInput += omleidingen.omleidingList[0].omleiding;
-                              htmlInput += 'Er zijn geen omleidingen gevonden';
+                              htmlInput += `<br />`;
+                              htmlInput += '${omleidingen.omleidingList[0].omleiding}';
+                              htmlInput += `<br />`;
+                              //geenOmleidingen = true;
                          }
 
                     });
+
+                    // if (geenOmleidingen === true) {
+                    //      htmlInput += 'Er zijn geen omleidingen gevonden';
+                    //      htmlInput += `<br />`;
+                    // } else {
+                    //      htmlInput += 'Er zijn omleidingen gevonden';
+                    //      htmlInput += `<br />`;
+                    // }
+
+                    // Dit geeft aan dat de omleidingen worden geschreven in de html, het juiste aantal maar niet gespecifieerd
+                    htmlInput += 'Er zijn geen omleidingen gevonden';
+                    htmlInput += '<br />';
 
                }
 
