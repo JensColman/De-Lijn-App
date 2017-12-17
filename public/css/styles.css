@@ -178,6 +178,11 @@ p {
      color: #000000;
 }
 
+p.lijntraject {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
 .titelHome{
   text-align: center;
   width: 100%;
@@ -302,7 +307,6 @@ h3.knop2Wit {
      margin-bottom: 0px;
 }
 
-
 .input2 {
      position: relative;
      width: 148px;
@@ -336,7 +340,6 @@ h3.knop2Wit {
 .input3:last-of-type {
      margin-bottom: 0px;
 }
-
 /* <<< */
 
 /* Nog een naam geven aub */
@@ -419,6 +422,56 @@ h3.knop2Wit {
      transform: translate(-50%);
 }
      /* <<< */
+     /* favorieten */
+     /* >>> */
+.favorite {
+      width: 80%;
+      height: 500px;
+      margin: 40px auto;
+      padding: 15px;
+      display: flex;
+}
+
+.favorite-column {
+      height: 400px;
+      justify-content: center;
+}
+
+.favoriete-lijnnummer {
+      margin-right: 25px;
+}
+
+.lijnnummer {
+      width: 65px;
+      height: 40px;
+      color: #ffffff;
+      background: red;
+      border-radius: 11px;
+      text-align: center;
+      line-height: 40px;
+      margin-bottom: 25px;
+}
+
+.ln-1 {
+      background: #FF52A5;
+}
+
+.ln-2 {
+      background: #27AE60;
+}
+
+.ln-3 {
+      background: #2D9CDB;
+}
+
+.ln-4 {
+      background: #FAAA9E;
+}
+
+.ln-5 {
+      background: #365FAD;
+}
+      /* <<< */
      /* instellingen.ejs */
      /* <<< */
 .achtergrond_instellingen {
