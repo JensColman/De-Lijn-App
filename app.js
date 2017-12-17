@@ -57,7 +57,7 @@ app.post('/result', function(req, res) {
                               s_d += "Geen omleidingen";
                          } else {
                               console.log(omleidingen.omleidingList[0].omleiding);
-                              s_d += ",bdsfksdjfbkjsdbf";
+                              s_d += omleidingen.omleidingList[0].omleiding;
                          }
 
                     });
