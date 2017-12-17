@@ -16,13 +16,13 @@ app.use(require("./routes/root_router"));
 
 
 app.post('/result', function(req, res) {
-     var s_d = ' ';
+     var htmlInput = '';
      request('https://www.delijn.be/rise-api-search/search/quicksearch/' + req.body.lijnnummer, function (error, response, body) {
           var d = JSON.parse(body);
           //console.log(d);
 
           if(d.lijnen.length === 0) {
-               s_d += 'Er zijn geen lijnen gevonden';
+               htmlInput += 'Er zijn geen lijnen gevonden';
           } else {
 
                for(var i=0; i < d.lijnen.length; i++) {
@@ -54,10 +54,13 @@ app.post('/result', function(req, res) {
 
                          if (omleidingen.omleidingList.length === 0) {
                               console.log("geen omleidingen gevonden");
-                              s_d += "Geen omleidingen";
+                              htmlInput += 'Er zijn geen omleidingen gevonden';
+
+
                          } else {
                               console.log(omleidingen.omleidingList[0].omleiding);
-                              s_d += omleidingen.omleidingList[0].omleiding;
+                              htmlInput += omleidingen.omleidingList[0].omleiding;
+                              htmlInput += 'Er zijn geen omleidingen gevonden';
                          }
 
                     });
@@ -68,7 +71,8 @@ app.post('/result', function(req, res) {
 
 
           res.render('result', {
-               omleidingen: body,
+               //omleidingen: body,
+               omleidingenLijst: `${htmlInput}`,
           });
      });
 });
