@@ -60,6 +60,7 @@ app.post('/storingenResult', function(req, res) {
                               htmlInput += 'Er zijn geen omleidingen gevonden';
                               htmlInput += `<br />`;
                               //geenOmleidingen = false;
+                              
 
                          } else {
                               console.log(omleidingen.omleidingList[0].omleiding);
@@ -69,6 +70,7 @@ app.post('/storingenResult', function(req, res) {
                               htmlInput += `<br />`;
                               //geenOmleidingen = true;
                          }
+
 
                     });
 
