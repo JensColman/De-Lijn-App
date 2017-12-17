@@ -16,13 +16,13 @@ app.use(require("./routes/root_router"));
 
 
 app.post('/result', function(req, res) {
-     var s_d = ' ';
+     var htmlInput = '';
      request('https://www.delijn.be/rise-api-search/search/quicksearch/' + req.body.lijnnummer, function (error, response, body) {
           var d = JSON.parse(body);
           //console.log(d);
 
           if(d.lijnen.length === 0) {
-               s_d += 'Er zijn geen lijnen gevonden';
+               htmlInput += 'Er zijn geen lijnen gevonden';
           } else {
 
                for(var i=0; i < d.lijnen.length; i++) {
@@ -49,18 +49,40 @@ app.post('/result', function(req, res) {
                     // Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 
 
+                    // var geenOmleidingen = false;
+
                     request('https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl', function (error, response, body) {
                          var omleidingen = JSON.parse(body);
 
+                         // Hier loopt het fout, deze if functie werkt niet
                          if (omleidingen.omleidingList.length === 0) {
                               console.log("geen omleidingen gevonden");
-                              s_d += "Geen omleidingen";
+                              htmlInput += 'Er zijn geen omleidingen gevonden';
+                              htmlInput += `<br />`;
+                              //geenOmleidingen = false;
+
                          } else {
                               console.log(omleidingen.omleidingList[0].omleiding);
-                              s_d += omleidingen.omleidingList[0].omleiding;
+                              htmlInput += omleidingen.omleidingList[0].omleiding;
+                              htmlInput += `<br />`;
+                              htmlInput += '${omleidingen.omleidingList[0].omleiding}';
+                              htmlInput += `<br />`;
+                              //geenOmleidingen = true;
                          }
 
                     });
+
+                    // if (geenOmleidingen === true) {
+                    //      htmlInput += 'Er zijn geen omleidingen gevonden';
+                    //      htmlInput += `<br />`;
+                    // } else {
+                    //      htmlInput += 'Er zijn omleidingen gevonden';
+                    //      htmlInput += `<br />`;
+                    // }
+
+                    // Dit geeft aan dat de omleidingen worden geschreven in de html, het juiste aantal maar niet gespecifieerd
+                    htmlInput += 'Er zijn geen omleidingen gevonden';
+                    htmlInput += '<br />';
 
                }
 
@@ -68,7 +90,8 @@ app.post('/result', function(req, res) {
 
 
           res.render('result', {
-               omleidingen: body,
+               //omleidingen: body,
+               omleidingenLijst: `${htmlInput}`,
           });
      });
 });
