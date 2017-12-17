@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(require("./routes/root_router"));
 
 
-app.post('/result', function(req, res) {
+app.post('/storingenResult', function(req, res) {
      var htmlInput = '';
      request('https://www.delijn.be/rise-api-search/search/quicksearch/' + req.body.lijnnummer, function (error, response, body) {
           var d = JSON.parse(body);
@@ -89,7 +89,7 @@ app.post('/result', function(req, res) {
           }
 
 
-          res.render('result', {
+          res.render('storingenResult', {
                //omleidingen: body,
                omleidingenLijst: `${htmlInput}`,
           });
