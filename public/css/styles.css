@@ -1,0 +1,530 @@
+/* Grid van het document is 38x40px voor het grote vierkantje en 10px voor de marge */
+
+/* Positionering van onze app tegenover ons scherm */
+/* >>> */
+html {
+     background: #333;
+}
+/* <<< */
+
+body {
+     width: 417px;
+     height: 736px;
+     background: #FFD300;
+     font-family: 'Roboto', sans-serif;
+     /* Positionering van onze app tegenover ons scherm */
+     /* >>> */
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-image: url(../img/achtergrond_geleboog.svg);
+     /* <<< */
+}
+
+.marge {
+     width: 320px;
+     padding-left: 47px;
+     padding-right: 47px;
+}
+
+/*navigatie*/
+/* >>> */
+.icon_home, .icon_storingen, .icon_favorieten, .icon_instellingen {
+  display: block;
+  width: 50px;
+  height: 67px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon_home {
+  background-image: url('../img/home.png');
+}
+
+.icon_storingen {
+  background-image: url('../img/storingen.png');
+}
+
+.icon_favorieten {
+  background-image: url('../img/favorieten.png');
+}
+
+.icon_instellingen {
+  background-image: url('../img/instellingen.png');
+}
+
+nav {
+  background-color: #828282;
+  width: 100%;
+  border-bottom: 5px solid lightgrey;
+  height: 67px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1em;
+  font-weight: 900;
+}
+
+.current {
+  border-bottom: 5px solid #56CCF2;
+}
+
+a {
+     text-decoration: none;
+     color: inherit;
+}
+
+/* <<< */
+
+/* Elementen */
+/* >>> */
+.boog1 {
+     position: absolute;
+     width: 414px;
+     height: 736px;
+     left: 0px;
+     top: 0px;
+     z-index: 1;
+}
+
+.lijnRouteplanner {
+     position: relative;
+     top: -138px;
+     left: 14px;
+}
+
+.pijlenRouteplanner {
+     position: relative;
+     top: -156px;
+     left: 245px;
+}
+
+.achtergrondAfbeelding {
+     background-image: url("/img/achtergrondAfbeelding2.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 100%;
+     width: 100%;
+     position: absolute;
+}
+
+.terugPijl {
+     position: absolute;
+     top: 35px;
+     left: 47px;
+}
+
+/*.achtergrondAfbeelding {
+     height: inherit;
+     filter: blur(7px);
+     transform: scale(1.1);
+     position: relative;
+     right: 200px;
+}
+
+.clippingAchtergrond {
+     width: auto;
+     height: 100%;
+     overflow: hidden;
+}*/
+/* <<< */
+
+/* Styling van tekst */
+/* >>> */
+h1 {
+     font-weight: 500;
+     line-height: normal;
+     font-size: 46px;
+     text-align: center;
+     color: #F2F2F2;
+     margin-bottom: 10px;
+}
+
+h2 {
+     font-weight: 700;
+     line-height: normal;
+     font-size: 30px;
+     text-align: center;
+     color: #000000;
+     margin-bottom: 10px;
+     width: 320px;
+}
+
+h2.white {
+     color: #F2F2F2;
+}
+
+p {
+     font-weight: 300;
+     line-height: normal;
+     font-size: 14px;
+     text-align: left;
+     color: #000000;
+}
+
+.titelHome{
+  text-align: center;
+  width: 100%;
+  margin: 5% 0;
+}
+/* <<< */
+
+/* Knoppen */
+/* >>> */
+     /* Grote knoppen */
+     /* >>> */
+.knop1-1 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10px;
+     background: #F2F2F2;
+     border-radius: 5px;
+}
+
+h3.knop1Licht {
+     font-weight: 300;
+     font-size: 12px;
+     text-align: left;
+     padding-left: 10px;
+     color: #828282;
+     line-height: 39px;
+     /*vertical-align: middle; --> doet niks*/
+}
+
+.knop1-2 {
+     position: relative;
+     width: 320px;
+     height: 49px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10px;
+     background: #2D9CDB;
+     border-radius: 5px;
+     margin-top: 39px;
+}
+
+h3.knop1Donker {
+     font-weight: 700;
+     font-size: 16px;
+     text-align: center;
+     color: #F2F2F2;
+     line-height: 49px;
+     vertical-align: middle;
+}
+
+.knop1-3 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10px;
+     background: #FFD300;
+}
+
+h3.knop1Geel {
+     font-weight: 700;
+     font-size: 16px;
+     text-align: center;
+     color: #333333;
+     line-height: 39px;
+     vertical-align: middle;
+}
+
+.knop2-1 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10px;
+     background: rgba(0,0,0,0);
+}
+
+h3.knop2Zwart {
+     font-weight: 300;
+     font-size: 16px;
+     text-align: center;
+     color: #828282;
+     line-height: 39px;
+     vertical-align: middle;
+     text-decoration: underline;
+}
+
+h3.knop2Wit {
+     font-weight: 300;
+     font-size: 16px;
+     text-align: center;
+     color: #ffffff;
+     line-height: 39px;
+     vertical-align: middle;
+     text-decoration: underline;
+}
+     /* <<< */
+/* <<< */
+
+/* Input */
+/* >>> */
+.input1 {
+     position: relative;
+     width: 273px;
+     height: 39px;
+     padding-left: 43px;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: left;
+     color: #828282;
+     line-height: 39px;
+     vertical-align: middle;
+     margin-bottom: 10px;
+}
+
+.input1:last-of-type {
+     margin-bottom: 0px;
+}
+
+
+.input2 {
+     position: relative;
+     width: 148px;
+     height: 39px;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: center;
+     color: #828282;
+     line-height: 39px;
+     margin-right: 8.99px;
+}
+
+.input2:last-of-type {
+     margin-right: 0px;
+}
+
+.input3 {
+     position: relative;
+     width: 320px;
+     height: 39px;
+     border: none;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: center;
+     color: #828282;
+     line-height: 39px;
+     vertical-align: middle;
+     margin-bottom: 0px;
+}
+
+.input3:last-of-type {
+     margin-bottom: 0px;
+}
+
+/* <<< */
+
+/* Nog een naam geven aub */
+/* >>> */
+.routeplanner {
+     margin-bottom: 10px;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+}
+
+/* <<< */
+
+/* Pagina's */
+/* >>> */
+     /* welkomstscherm */
+     /* >>> */
+.h2welkomstscherm {
+     position: absolute;
+     top: 200px;
+     font-weight: 400;
+     left: 50%;
+     transform: translate(-50%);
+}
+
+.knopGeelwelkomstscherm {
+     position: absolute;
+     top: 550px;
+     left: 50%;
+     transform: translate(-50%);
+}
+
+.knopWitwelkomstscherm {
+     position: absolute;
+     top: 600px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* Aanmeldscherm */
+     /* >>> */
+.aanmeldingsTitel {
+     position: absolute;
+     top: 150px;
+     left: 50%;
+     transform: translate(-50%);
+}
+
+.aanmeldingsForm {
+     position: absolute;
+     top: 450px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* Registreren */
+     /* >>> */
+.registrerenForm {
+     position: absolute;
+     top: 352px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* RegiGelukt */
+     /* >>> */
+.regiGeluktForm {
+     position: absolute;
+     top: 548px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* test API */
+     /* >>> */
+.testForm {
+     position: absolute;
+     top: 150px;
+     left: 50%;
+     transform: translate(-50%);
+}
+     /* <<< */
+     /* instellingen.ejs */
+     /* <<< */
+.achtergrond_instellingen {
+  background-color: #828282;
+  width: 417px;
+  height: 736px;
+  background-image: url(../img/achtergrond_instellingen.svg);
+  background-repeat: no-repeat;
+}
+
+.profile {
+  display: block;
+  padding-top: 50px;
+}
+
+#profielbox {
+  width: 94px;
+  height: 94px;
+  background-image: url(../img/profielfoto.png);
+  margin: 0 auto 20px;
+}
+
+.username {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  width: auto;
+  position: relative;
+}
+
+.kleine_link {
+  font-size: 14px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  text-decoration: underline;
+  color: #FFFFFF;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+.oplijsting_instellingen {
+  width: 288px;
+  margin: 0px auto;
+}
+
+.oplijsting_instellingen li {
+  margin-bottom: 30px;
+}
+
+.link_instellingen {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 30px;
+  color: #FFFFFF;
+  text-align: left;
+  width: auto;
+  display: inline;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.tickets {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/tickets.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
+
+.account {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/account.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
+
+.instellingen {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/tandwiel.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
+
+.over {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/over.svg);
+  vertical-align: middle;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+}
