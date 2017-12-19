@@ -615,5 +615,11 @@ h3.knop2Wit {
 .storingForm {
      width: 100%;
      text-align: center;
+     margin-bottom: 30px;
+}
+
+.storing1 {
+     font-weight: 500;
+     margin-bottom: 5px;
 }
 /* <<< */
