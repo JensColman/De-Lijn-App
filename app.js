@@ -23,7 +23,7 @@ app.post('/storingenResult', (req, res) => {
 	})
 		.then(body => {
 			if (body.lijnen.length === 0) {
-				return Promise.resolve('Er zijn geen lijnen gevonden');
+				return Promise.resolve({shouldSkip: true, msg: 'Er zijn geen lijnen gevonden'});
 			} else {
 				return Promise.all(body.lijnen.map(lijn => new Promise(resolve => {
 					// Datum verkrijgen
@@ -43,19 +43,22 @@ app.post('/storingenResult', (req, res) => {
 					dagVanVandaag = dd + '-' + mm + '-' + yyyy;
 
 					//Tijdelijke overschrijving datum
-					// dagVanVandaag = "29-11-2017";
+					dagVanVandaag = "29-11-2017";
 					// Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 					rp({
 						method: "GET",
 						url: 'https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl',
 						json: true
-					}).then(body => resolve({lijn: lijn, request: body}));
+					}).then(body => resolve({shouldSkip: false, lijn: lijn, request: body}));
 				})));
 			}
 		})
 		.then(omleidingsLijnRequests => {
-				let tmp = "";
-				omleidingsLijnRequests
+				if (omleidingsLijnRequests.shouldSkip) {
+					return omleidingsLijnRequests.msg; // In dit geval is het de boodschap uit de if van bovenstaande .then()
+				}
+
+				return omleidingsLijnRequests
 					.map(omleidingsInfo => {
 						let lijn;
 						// Hier loopt het fout, deze if functie werkt niet
@@ -74,8 +77,7 @@ app.post('/storingenResult', (req, res) => {
 						lijn += `<br /><br />`;
 						return lijn;
 					})
-					.forEach(lijn => tmp += lijn);
-				return Promise.resolve(tmp);
+					.join("");
 			}
 		)
 		// .catch(err => `An error occurred! :'(<br />${err}`)
