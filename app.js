@@ -78,7 +78,7 @@ app.post('/storingenResult', (req, res) => {
 				return Promise.resolve(tmp);
 			}
 		)
-		.catch(err => data = `An error occurred! :'(<br />${err}`)
+		.catch(err => `An error occurred! :'(<br />${err}`)
 		.then(data => res.render('storingenResult', {
 			omleidingenLijst: `${data}`,
 		}));
