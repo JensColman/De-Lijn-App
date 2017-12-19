@@ -45,28 +45,33 @@ app.post('/storingenResult', (req, res) => {
 					//Tijdelijke overschrijving datum
 					dagVanVandaag = "29-11-2017";
 					// Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
-					resolve(rp({
+					rp({
 						method: "GET",
 						url: 'https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl',
 						json: true
-					}));
+					}).then(body => resolve({lijn: lijn, request: body}));
 				})));
 			}
 		})
-		.then(omleidingsRequests => {
+		.then(omleidingsLijnRequests => {
 				let tmp = "";
-				omleidingsRequests
+				omleidingsLijnRequests
 					.map(omleidingsInfo => {
 						let lijn;
-						if (omleidingsInfo.geenOmleidingen) {
-							lijn = 'Er zijn geen omleidingen gevonden';
-							lijn += `<br />`;
-
+						// Hier loopt het fout, deze if functie werkt niet
+						lijn = `<h3>${omleidingsInfo.lijn.omschrijving}: </h3>`;
+						if (omleidingsInfo.request.geenOmleidingen) {
+							// console.log("1. geen omleidingen gevonden");
+							lijn += 'Er zijn geen omleidingen gevonden';
+							//geenOmleidingen = false;
 						} else {
 							// console.log(omleidingen.omleidingList[0].omleiding);
-							lijn = omleidingsInfo.omleidingList[0].omleiding;
-							lijn += `<br />`;
+							lijn += omleidingsInfo.request.omleidingList[0].omleiding;
+							// htmlInput += '${omleidingen.omleidingList[0].omleiding}';
+							// htmlInput += `<br />`;
+							//geenOmleidingen = true;
 						}
+						lijn += `<br /><br />`;
 						return lijn;
 					})
 					.forEach(lijn => tmp += lijn);
