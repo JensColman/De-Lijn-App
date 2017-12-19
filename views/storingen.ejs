@@ -1,5 +1,6 @@
 <% include header %>
 
+
 <a href="/home">
      <svg class="terugPijl" version="1.1"
      	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -13,15 +14,11 @@
      </svg>
 </a>
 
+<h1 class="storingTitel">Storingen</h1>
 
-<h1>storingen</h1>
-
-<h2>Vul lijnnummer in</h2>
-
-<form method="post" action="/storingenResult">
-  <input type="text" name="lijnnummer" value="">
-
-  <input type="submit" value="toon resultaten">
+<form class="storingForm" method="post" action="/storingenResult">
+  <input class="input2 inputStoring" type="text" name="lijnnummer" value="" placeholder="Lijnnummer">
+  <input class="knopStoring" type="submit" value="Zoeken">
 </form>
 
 <script type="text/javascript">

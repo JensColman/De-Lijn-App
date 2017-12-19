@@ -62,7 +62,7 @@ app.post('/storingenResult', (req, res) => {
 					.map(omleidingsInfo => {
 						let lijn;
 						// Hier loopt het fout, deze if functie werkt niet
-						lijn = `<h3>${omleidingsInfo.lijn.omschrijving}: </h3>`;
+						lijn = `<h5>${omleidingsInfo.lijn.omschrijving}: </h5>`;
 						if (omleidingsInfo.request.geenOmleidingen) {
 							// console.log("1. geen omleidingen gevonden");
 							lijn += `<h3>Er zijn geen omleidingen gevonden</h3>`;
