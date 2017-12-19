@@ -1,25 +1,29 @@
 {
-  "name": "Digibytes",
-  "version": "1.0.0",
-  "description": "De Lijn",
-  "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "start": "node app.js"
-  },
-  "keywords": [
-    "web",
-    "nieuws",
-    "technology",
-    "node",
-    "express"
-  ],
-  "author": "Siu Soan, Jens Colman, Axana Vercamme en Loren Van Goubergen",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^2.5.6",
-    "express": "^4.15.2"
-  }
+	"name": "Digibytes",
+	"version": "1.0.0",
+	"description": "De Lijn",
+	"main": "app.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"start": "node app.js",
+		"start (debug)": "node $NODE_DEBUG_OPTION app.js"
+	},
+	"keywords": [
+		"Web",
+		"De Lijn",
+		"Technology",
+		"Node",
+		"Express"
+	],
+	"author": "Siu Soan, Jens Colman, Axana Vercamme en Loren Van Goubergen",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"ejs": "^2.5.6",
+		"express": "^4.15.2",
+		"request": "^2.83.0",
+		"request-promise-native": "^1.0.5"
+	}
 }

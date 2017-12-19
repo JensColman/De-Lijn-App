@@ -734,3 +734,64 @@ select.keuze_VA {
   margin-bottom: 0px;
   background-repeat: no-repeat;
 }
+/* <<< */
+/* instellingen.ejs */
+/* >>> */
+.storingTitel {
+     margin-top: 93px;
+     margin-bottom: 20px;
+     text-align: center;
+     color: black;
+     font-weight: 700;
+     font-size: 30px;
+}
+
+.inputStoring {
+     width: 155px;
+     height: 43px;
+     margin-right: 10px;
+     margin-bottom: 10px;
+}
+
+.knopStoring {
+     position: relative;
+     width: 155px;
+     height: 49px;
+     margin-bottom: 10px;
+     background: #2D9CDB;
+     border-radius: 5px;
+     font-weight: 500;
+     font-size: 16px;
+     text-align: center;
+     color: #F2F2F2;
+     line-height: 49px;
+     vertical-align: middle;
+     top: 2px;
+}
+
+.storingForm {
+     width: 100%;
+     text-align: center;
+     margin-bottom: 30px;
+}
+
+.containerOmleidingen {
+     width: 320px;
+     height: 430px;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-y: scroll;
+}
+
+.storing1 {
+     font-weight: 700;
+     margin-bottom: 10px;
+     border-top: 1px solid black;
+     padding-top: 15px;
+}
+
+.storing2 {
+     font-weight: 300;
+     margin-bottom: 5px;
+}
+/* <<< */
