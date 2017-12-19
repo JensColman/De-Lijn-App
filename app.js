@@ -79,7 +79,6 @@ app.post('/storingenResult', (req, res) => {
 			}
 		)
 		// .catch(err => `An error occurred! :'(<br />${err}`)
-		// .catch(`<h3>kan het lijnnummer niet vinden</h3>`)
 		.then(data => res.render('storingenResult', {
 			omleidingenLijst: `${data}`,
 		}));
