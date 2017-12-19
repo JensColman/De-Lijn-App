@@ -43,7 +43,7 @@ app.post('/storingenResult', (req, res) => {
 					dagVanVandaag = dd + '-' + mm + '-' + yyyy;
 
 					//Tijdelijke overschrijving datum
-					//dagVanVandaag = "29-11-2017";
+					// dagVanVandaag = "29-11-2017";
 					// Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 					resolve(rp({
 						method: "GET",
@@ -55,25 +55,39 @@ app.post('/storingenResult', (req, res) => {
 		})
 		.then(omleidingsRequests => {
 				let tmp = "";
+				// let zelfdeResult1 = 0;
+				// let zelfdeResult2 = 0;
 				omleidingsRequests
 					.map(omleidingsInfo => {
 						let lijn;
 						if (omleidingsInfo.geenOmleidingen) {
-							lijn = 'Er zijn geen omleidingen gevonden';
-							lijn += `<br />`;
+							lijn = `<h6>Er zijn geen omleidingen gevonden</h6>`;
+							//lijn += `<br />`;
+							// zelfdeResult1++;
 
 						} else {
 							// console.log(omleidingen.omleidingList[0].omleiding);
-							lijn = omleidingsInfo.omleidingList[0].omleiding;
-							lijn += `<br />`;
+							lijn = `<h6>${omleidingsInfo.omleidingList[0].omleiding}</h6>`;
+							//lijn += `<br />`;
+							// zelfdeResult2++;
 						}
 						return lijn;
 					})
+
 					.forEach(lijn => tmp += lijn);
+
+					// if (zelfdeResult1 > 1) {
+					// 	lijn = `<h6>Er zijn geen omleidingen gevonden</h6>`;
+					// } else {
+					// 	omleidingsRequests.forEach(lijn => tmp += lijn);
+					// }
+					// console.log(zelfdeResult1);
+					// console.log(zelfdeResult2);
+
 				return Promise.resolve(tmp);
 			}
 		)
-		.catch(err => data = `An error occurred! :'(<br />${err}`)
+		.catch(err => data = `<h6>Kan lijnnummer niet vinden</h6><br />${err}`)
 		.then(data => res.render('storingenResult', {
 			omleidingenLijst: `${data}`,
 		}));
