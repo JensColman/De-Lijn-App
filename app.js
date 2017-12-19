@@ -43,7 +43,7 @@ app.post('/storingenResult', (req, res) => {
 					dagVanVandaag = dd + '-' + mm + '-' + yyyy;
 
 					//Tijdelijke overschrijving datum
-					dagVanVandaag = "29-11-2017";
+					// dagVanVandaag = "29-11-2017";
 					// Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 					rp({
 						method: "GET",
@@ -64,14 +64,14 @@ app.post('/storingenResult', (req, res) => {
 					.map(omleidingsInfo => {
 						let lijn;
 						// Hier loopt het fout, deze if functie werkt niet
-						lijn = `<h3>${omleidingsInfo.lijn.omschrijving}: </h3>`;
+						lijn = `<h3 class="storing1 storingTekst">${omleidingsInfo.lijn.omschrijving}: </h3>`;
 						if (omleidingsInfo.request.geenOmleidingen) {
 							// console.log("1. geen omleidingen gevonden");
-							lijn += 'Er zijn geen omleidingen gevonden';
+							lijn += `<h3class="storing2 storingTekst">Er zijn geen omleidingen gevonden</h3>`;
 							//geenOmleidingen = false;
 						} else {
 							// console.log(omleidingen.omleidingList[0].omleiding);
-							lijn += omleidingsInfo.request.omleidingList[0].omleiding;
+							lijn += `<h3 class="storing3 storingTekst">${omleidingsInfo.request.omleidingList[0].omleiding} </h3>`;
 							// htmlInput += '${omleidingen.omleidingList[0].omleiding}';
 							// htmlInput += `<br />`;
 							//geenOmleidingen = true;
