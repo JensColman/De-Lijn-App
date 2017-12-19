@@ -25,7 +25,7 @@ app.post('/storingenResult', (req, res) => {
 			if (body.lijnen.length === 0) {
 				return Promise.resolve({shouldSkip: true, msg: 'Er zijn geen lijnen gevonden'});
 			} else {
-				return Promise.all(body.lijnen.map(lijn => new Promise(resolve => {
+				return Promise.all(body.lijnen.map(lijn => new Promise((resolve, reject) => {
 					// Datum verkrijgen
 					let dagVanVandaag = new Date();
 					let dd = dagVanVandaag.getDate();
@@ -49,7 +49,9 @@ app.post('/storingenResult', (req, res) => {
 						method: "GET",
 						url: 'https://www.delijn.be/rise-api-core/reizigersberichten/omleidingen/lijn/' + lijn.entiteitNummer + '/' + lijn.internLijnnummer + '/' + lijn.richtingCode + '/' + dagVanVandaag + '/nl',
 						json: true
-					}).then(body => resolve({shouldSkip: false, lijn: lijn, request: body}));
+					})
+						.then(body => resolve({lijn: lijn, request: body}))
+						.catch(() => reject());
 				})));
 			}
 		})
@@ -80,7 +82,7 @@ app.post('/storingenResult', (req, res) => {
 					.join("");
 			}
 		)
-		.catch(err => `An error occurred! :'(<br />${err}`)
+		.catch(err => `Er is een fout opgetreden. Onze excuses voor het ongemak.\`<br />${err}`)
 		.then(data => res.render('storingenResult', {
 			omleidingenLijst: `${data}`,
 		}));
