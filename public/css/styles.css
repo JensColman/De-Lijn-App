@@ -21,7 +21,7 @@ body {
      transform: translate(-50%, -50%);
      background-image: url(../img/achtergrond_geleboog.svg);
      /* <<< */
-     overflow: scroll;
+     overflow-y: scroll;
 }
 
 .marge {
