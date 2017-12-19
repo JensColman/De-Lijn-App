@@ -618,8 +618,25 @@ h3.knop2Wit {
      margin-bottom: 30px;
 }
 
+.containerOmleidingen {
+     width: 320px;
+     height: 430px;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-y: scroll;
+}
+
+.storingTekst {
+
+}
+
 .storing1 {
-     font-weight: 500;
+     font-weight: 700;
+     margin-bottom: 5px;
+}
+
+.storing2 {
+     font-weight: 300;
      margin-bottom: 5px;
 }
 /* <<< */
