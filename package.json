@@ -11,11 +11,11 @@
 		"start (debug)": "node $NODE_DEBUG_OPTION app.js"
 	},
 	"keywords": [
-		"web",
-		"nieuws",
-		"technology",
-		"node",
-		"express"
+		"Web",
+		"De Lijn",
+		"Technology",
+		"Node",
+		"Express"
 	],
 	"author": "Siu Soan, Jens Colman, Axana Vercamme en Loren Van Goubergen",
 	"license": "ISC",
