@@ -62,11 +62,11 @@ app.post('/storingenResult', (req, res) => {
 						lijn = `<h3>${omleidingsInfo.lijn.omschrijving}: </h3>`;
 						if (omleidingsInfo.request.geenOmleidingen) {
 							// console.log("1. geen omleidingen gevonden");
-							lijn += 'Er zijn geen omleidingen gevonden';
+							lijn += `<h3>Er zijn geen omleidingen gevonden</h3>`;
 							//geenOmleidingen = false;
 						} else {
 							// console.log(omleidingen.omleidingList[0].omleiding);
-							lijn += omleidingsInfo.request.omleidingList[0].omleiding;
+							lijn += `<h3>${omleidingsInfo.request.omleidingList[0].omleiding} </h3>`;
 							// htmlInput += '${omleidingen.omleidingList[0].omleiding}';
 							// htmlInput += `<br />`;
 							//geenOmleidingen = true;
@@ -78,7 +78,8 @@ app.post('/storingenResult', (req, res) => {
 				return Promise.resolve(tmp);
 			}
 		)
-		.catch(err => `An error occurred! :'(<br />${err}`)
+		// .catch(err => `An error occurred! :'(<br />${err}`)
+		// .catch(`<h3>kan het lijnnummer niet vinden</h3>`)
 		.then(data => res.render('storingenResult', {
 			omleidingenLijst: `${data}`,
 		}));
