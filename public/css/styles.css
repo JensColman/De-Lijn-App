@@ -200,13 +200,14 @@ p.lijntraject {
      /* >>> */
 .knop1-1 {
      position: relative;
-     width: 320px;
+     width: 310px;
      height: 39px;
      margin-left: auto;
      margin-right: auto;
      margin-bottom: 10px;
      background: #F2F2F2;
      border-radius: 5px;
+     padding-left: 10px;
 }
 
 h3.knop1Licht {
