@@ -43,7 +43,7 @@ app.post('/storingenResult', (req, res) => {
 					dagVanVandaag = dd + '-' + mm + '-' + yyyy;
 
 					//Tijdelijke overschrijving datum
-					dagVanVandaag = "29-11-2017";
+					// dagVanVandaag = "29-11-2017";
 					// Zoek naar lijnnummer 99 en je krijgt een omleiding te zien op deze dag
 					rp({
 						method: "GET",

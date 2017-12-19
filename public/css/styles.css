@@ -586,7 +586,11 @@ h3.knop2Wit {
 /* >>> */
 .storingTitel {
      margin-top: 93px;
+     margin-bottom: 20px;
      text-align: center;
+     color: black;
+     font-weight: 700;
+     font-size: 30px;
 }
 
 .inputStoring {
@@ -632,7 +636,9 @@ h3.knop2Wit {
 
 .storing1 {
      font-weight: 700;
-     margin-bottom: 5px;
+     margin-bottom: 10px;
+     border-top: 1px solid black;
+     padding-top: 15px;
 }
 
 .storing2 {
