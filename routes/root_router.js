@@ -63,6 +63,13 @@ root.get('/storingen', function(req, res) {
   });
 });
 
+// Route naar storingenResult
+root.get('/storingenResult', function(req, res) {
+  res.render("storingenResult", {
+       page_name: "storingenResult"
+  });
+});
+
 // Route naar suggesties
 root.get('/suggesties', function(req, res) {
   res.render("suggesties", {
