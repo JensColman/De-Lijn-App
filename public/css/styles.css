@@ -4,7 +4,6 @@
 /* >>> */
 html {
      background: #333;
-     overflow: hidden;
 }
 /* <<< */
 
@@ -21,7 +20,6 @@ body {
      transform: translate(-50%, -50%);
      background-image: url(../img/achtergrond_geleboog.svg);
      /* <<< */
-     overflow-y: scroll;
 }
 
 .marge {
@@ -422,6 +420,7 @@ select.keuze_VA {
   background-color: white;
   margin-top: 30px;
   padding: 10px 0;
+  height: 336px;
 }
 
 .gevonden_Route {
